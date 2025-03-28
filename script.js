@@ -1,14 +1,18 @@
 function isSameType(value1, value2) {
-	{
+
+    if (Number.isNaN(value1) || Number.isNaN(value2)) {
+        let isBothNan = (Number.isNaN(value1) && Number.isNaN(value2));
+        return (isBothNan);
+    }
+
     let argument1Type = typeof (value1);
     let argument2Type = typeof (value2);
 
-    if (argument1Type === argument2Type) {
-        return true;
-    }
-
-    return false;
+    return (argument1Type === argument2Type);
 }
+
+let result = isSameType("4", 3);
+console.log(result);
 
 let result = isSameType("4", 3);
 console.log(result);
