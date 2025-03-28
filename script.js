@@ -1,12 +1,17 @@
 function isSameType(value1, value2) {
-  let argument1Type = typeof (argument1);
-    let argument2Type = typeof (argument2);
+	{
+    let argument1Type = typeof (value1);
+    let argument2Type = typeof (value2);
 
     if (argument1Type === argument2Type) {
         return true;
     }
 
     return false;
+}
+
+let result = isSameType("4", 3);
+console.log(result);
 }
 
 // do not change the code below.
